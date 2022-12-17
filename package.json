@@ -1,0 +1,33 @@
+{
+  "name": "class",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yulia-Sm1999/ajs-homeworks-oop-class.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yulia-Sm1999/ajs-homeworks-oop-class/issues"
+  },
+  "homepage": "https://github.com/Yulia-Sm1999/ajs-homeworks-oop-class#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.20.5",
+    "@babel/preset-env": "^7.20.2",
+    "babel-jest": "^29.3.1",
+    "eslint": "^8.29.0",
+    "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "core-js": "^3.26.1",
+    "eslint-config-airbnb": "^19.0.4"
+  }
+}
