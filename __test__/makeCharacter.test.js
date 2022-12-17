@@ -18,6 +18,14 @@ test('should make new Bowman', () => {
   expect(realBowman).toEqual(expectedBowman);
 });
 
+test('should not make new Bowman', () => {
+  expect(() => new Bowman({ name: 'Clark', type: 'Bowmans' })).toThrow(new Error('Неверно выбран тип героя'));
+});
+
+test('should not make new Bowman as well', () => {
+  expect(() => new Bowman({ name: 'C', type: 'Bowman' })).toThrow(new Error('Неверное количество букв в имени!'));
+});
+
 test('should make new Swordsman', () => {
   const realSwordsman = new Swordsman({ name: 'Ben', type: 'Swordsman' });
   const expectedSwordsman = {
