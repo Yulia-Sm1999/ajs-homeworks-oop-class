@@ -6,7 +6,7 @@ import Zombie from '../src/Zombie';
 import Daemon from '../src/Daemon';
 
 test('should make new Bowman', () => {
-  const realBowman = new Bowman({ name: 'Clark', type: 'Bowman' });
+  const realBowman = new Bowman('Clark');
   const expectedBowman = {
     name: 'Clark',
     type: 'Bowman',
@@ -19,15 +19,15 @@ test('should make new Bowman', () => {
 });
 
 test('should not make new Bowman', () => {
-  expect(() => new Bowman({ name: 'Clark', type: 'Bowmans' })).toThrow(new Error('Неверно выбран тип героя'));
+  expect(() => new Bowman('Clark', 'Bowmans')).toThrow(new Error('Неверно выбран тип героя'));
 });
 
 test('should not make new Bowman as well', () => {
-  expect(() => new Bowman({ name: 'C', type: 'Bowman' })).toThrow(new Error('Неверное количество букв в имени!'));
+  expect(() => new Bowman('Cl')).toThrow(new Error('Неверное количество букв в имени!'));
 });
 
 test('should make new Swordsman', () => {
-  const realSwordsman = new Swordsman({ name: 'Ben', type: 'Swordsman' });
+  const realSwordsman = new Swordsman('Ben');
   const expectedSwordsman = {
     name: 'Ben',
     type: 'Swordsman',
@@ -40,7 +40,7 @@ test('should make new Swordsman', () => {
 });
 
 test('should make new Magician', () => {
-  const realMagician = new Magician({ name: 'Max', type: 'Magician' });
+  const realMagician = new Magician('Max');
   const expectedMagician = {
     name: 'Max',
     type: 'Magician',
@@ -53,7 +53,7 @@ test('should make new Magician', () => {
 });
 
 test('should make new Undead', () => {
-  const realUndead = new Undead({ name: 'Lex', type: 'Undead' });
+  const realUndead = new Undead('Lex');
   const expectedUndead = {
     name: 'Lex',
     type: 'Undead',
@@ -66,7 +66,7 @@ test('should make new Undead', () => {
 });
 
 test('should make new Zombie', () => {
-  const realZombie = new Zombie({ name: 'Beast', type: 'Zombie' });
+  const realZombie = new Zombie('Beast');
   const expectedZombie = {
     name: 'Beast',
     type: 'Zombie',
@@ -79,7 +79,7 @@ test('should make new Zombie', () => {
 });
 
 test('should make new Daemon', () => {
-  const realDaemon = new Daemon({ name: 'Andres', type: 'Daemon' });
+  const realDaemon = new Daemon('Andres');
   const expectedDaemon = {
     name: 'Andres',
     type: 'Daemon',
